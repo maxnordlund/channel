@@ -1,0 +1,27 @@
+{
+  "name": "channel",
+  "version": "0.0.0",
+  "description": "Go's channels implemented in JavaScript",
+  "main": "channel.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maxnordlund/channel.git"
+  },
+  "bugs": {
+    "url": "http://github.com/maxnordlund/channel/issues"
+  },
+  "keywords": [
+    "go",
+    "channel"
+  ],
+  "author": "Max Nordlund <max.nordlund@gmail.com>",
+  "license": "BSD-3-Clause",
+  "readmeFilename": "README.md",
+  "gitHead": "dfbce2185a2480e5355c6d89a11639b3d50a248c",
+  "dependencies": {
+    "bluebird": "~1.1.0"
+  }
+}
