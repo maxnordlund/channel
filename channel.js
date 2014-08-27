@@ -15,7 +15,7 @@ function Channel(type, length) {
 Channel.prototype.send = function send(object) {
   var resolver;
   if(object !== this.type && object.constructor !== this.type) {
-   return Promise.reject(new TypeError("Tried to send '"+ object +"' over a "+ this.type +" channel."));
+    return Promise.reject(new TypeError("Tried to send '"+ object +"' over a "+ this.type +" channel."));
   }
   if(this._receiving.length > 0) {
     this.receiving.unshift().resolve([object, true]);
@@ -26,9 +26,9 @@ Channel.prototype.send = function send(object) {
     return Promise.resolve();
   }
   resolver = Promise.defer();
-  this._sending.push(resolver)
+  this._sending.push(resolver);
   return resolver.promise.resolve(this._values).call("push", object);
-}
+};
 
 Channel.prototype.receive = function receive() {
   var resolver, object;
@@ -42,8 +42,6 @@ Channel.prototype.receive = function receive() {
   resolver = Promise.defer();
   this._receiving.push(resolver);
   return resolver.promise;
-}
+};
 
-Channel.prototype.close
-
-
+Channel.prototype.close  = function close() {};
